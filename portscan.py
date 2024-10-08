@@ -38,7 +38,7 @@ def main():
             result = sock.connect_ex((target, port)) # scan.
             if result == 0: # port is open is the result is 0
                 print(f"Port {port} is open")
-            elif result != 0:
+            else result != 0:
                 print(f"Port {port} is closed")
             sock.close()
         except socket.error as err: # catch
