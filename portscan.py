@@ -34,7 +34,7 @@ def main():
             # use the socket library to create a sock so that the program can communicate with the ports
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             # timeout
-            # socket.settimeout(1)
+            socket.settimeout(2)
             result = sock.connect_ex((target, port)) # scan.
             if result == 0: # port is open is the result is 0
                 print(f"Port {port} is open")
